@@ -158,8 +158,10 @@ function checkAnswers(event) {
 };
 
 function endQuiz() {
+    quizContainerEL.textContent = "";
     var newHighscore = timerEL.textContent;
     var highscoresContainer = document.createElement("div");
+    highscoresContainer.className = "container";
     var completedQuiz = document.createElement("h2");
     var scoreText = document.createElement("p");
 
@@ -180,7 +182,7 @@ function endQuiz() {
         var highScoreForm = document.createElement("form");
         var inputLabel = document.createElement("label");
         inputLabel.for = "addHighscore";
-        inputLabel.textContent = "Enter your Initials";
+        inputLabel.textContent = "Enter your initials ";
 
         var inputScore = document.createElement("input");
         inputScore.type = "text";
@@ -262,8 +264,8 @@ function displayScores() {
     startOverButton.className = "btn start-over";
 
     var clearButton = document.createElement("button");
-    clearButton.textContent = "Clear High Score";
-    clearButton.className = "btn";
+    clearButton.textContent = "Clear Scores";
+    clearButton.className = "btn clear";
 
     displayScoresContainer.appendChild(listScores);
     displayScoresContainer.appendChild(startOverButton);
@@ -288,7 +290,7 @@ function viewScore(event) {
 // clears local storage
 function clearScores() {
     localStorage.clear("quizScore");
-    alert("High Score cleared");
+    alert("High Scores cleared");
     restartQuiz();
 }
 

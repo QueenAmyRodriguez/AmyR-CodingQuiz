@@ -1,3 +1,44 @@
 * {
     box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+#viewHighScores {
+    color: rgb(255, 142, 227);
+}
+.page-content {
+    text-align: center;
+}
+.quizContainer {
+    text-align: center;
+}
+.btn {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    width: 250px;
+}
+#startQuiz, #addScoreButton, .start-over, .clear {
+    display: inline-block;
+    width: 140px;
+}
+
+.btn:hover {
+    background-color: rgb(110, 63, 119);
+}
+input {
+    width: 250px;
+}
+.container p {
+    font-size: 20px;
+}
